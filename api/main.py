@@ -7,6 +7,6 @@ app = FastAPI()
 async def diarys_all():
     return diarys_data.diarys_all()
 
-@app.post("/datas")
+@app.post("/create")
 async def create(diary_create=Body()):
     return diarys_data.create(diary_create)
