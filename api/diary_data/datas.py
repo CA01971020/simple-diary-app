@@ -19,3 +19,13 @@ diarys = [
 
 def diarys_all():
     return diarys
+
+def create(diary_create):
+    new_diary = Diary(
+        len(diarys) + 1,
+        diary_create.get("title"),
+        diary_create.get("diary_data"),
+        diary_create.get("diary"),
+    )
+    diarys.append(new_diary)
+    return(new_diary)
