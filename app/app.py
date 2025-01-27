@@ -12,22 +12,19 @@ if st.button("日記一覧"):
 if st.button("新規作成"):
     url = diary_create_url
 
-st.write("---")
-
 # 日記一覧表示
 if url == diary_all_url:
     response = requests.get(url)
-
+    st.title("日記一覧")
+    st.write("---")
     if response.status_code == 200:
         data = response.json()
-
         if data:
             for diary in data:
                 id = diary.get("id", "No id")
                 title = diary.get("title", "No title")
                 diary_data = diary.get("diary_data", "No data")
                 diary_text = diary.get("diary", "No diary")
-
                 st.write(f"日記番号: {id}")
                 st.write(f"タイトル: {title}")
                 st.write(f"日付: {diary_data}")
@@ -41,12 +38,13 @@ if url == diary_all_url:
 # 新規作成表示
 elif url == diary_create_url:
     response = requests.get(url)
-
-    if response.status_code == 200:
+    st.title("新規作成")
+    st.write("---")
+    
+    if response.status_code == 405:  # 状態コードのチェックを405に変更
         data = response.json()
-
         if data:
-                st.write("test")
+            st.write("test")
         else:
             st.write("No data found.")
     else:
