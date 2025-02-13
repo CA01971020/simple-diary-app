@@ -20,4 +20,28 @@ pydantic
 pip install -r requirements.txt
 ```
 
+### streamlit 起動
+
+```
+cd app
+```
+
+```
+streamlit run app.py
+```
+
+### FastAPI 仮想環境起動
+
+```
+cd api
+```
+
+```
+.\env\Scripts\activate
+```
+
+```
+uvicorn main:app --reload
+```
+
 ## フォルダ構成
