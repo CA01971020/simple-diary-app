@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from starlette import status
-from api.diary_data import datas as diarys_data
-from api.schemas import DiaryCreate
+from diary_data import datas as diarys_data
+from schemas import DiaryCreate
 
 router = APIRouter(prefix="/diarys",tags=["Diarys"])
 

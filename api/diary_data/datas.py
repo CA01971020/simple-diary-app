@@ -1,4 +1,4 @@
-from api.schemas import DiaryCreate
+from schemas import DiaryCreate
 
 class Diary:
     def __init__(
