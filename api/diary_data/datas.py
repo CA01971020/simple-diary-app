@@ -14,7 +14,8 @@ class Diary:
         self.diary_text = diary_text
 
 diarys = [
-    Diary(1,"テスト","2025年1月27日","テストデータ"),
+    Diary(1,"アプリ開発スタート","2025年1月27日","テストデータ"),
+    Diary(2,"アプリ完成","2025年2月27日","テストデータ")
 ]
 
 def diarys_all():
