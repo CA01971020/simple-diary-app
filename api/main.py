@@ -1,12 +1,5 @@
-from fastapi import FastAPI,Body
-from diary_data import datas as diarys_data
+from fastapi import FastAPI
+from api.routers import diary
 
 app = FastAPI()
-
-@app.get("/datas")
-async def diarys_all():
-    return diarys_data.diarys_all()
-
-@app.post("/create")
-async def create(diary_create=Body()):
-    return diarys_data.create(diary_create)
+app.include_router(diary.router)
