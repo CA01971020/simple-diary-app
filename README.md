@@ -30,18 +30,10 @@ cd app
 streamlit run app.py
 ```
 
-### FastAPI 仮想環境起動
+### FastAPI 環境起動
 
 ```
-cd api
-```
-
-```
-.\env\Scripts\activate
-```
-
-```
-uvicorn main:app --reload
+uvicorn api.main:app --reload
 ```
 
 ## フォルダ構成
