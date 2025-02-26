@@ -2,8 +2,8 @@ import streamlit as st
 import requests
 
 # URL定義
-diary_all_url = "http://127.0.0.1:8000/diarys"
-diary_create_url = "http://127.0.0.1:8000/diarys"
+diary_all_url = "https://simple-diary-app.onrender.com/diarys"
+diary_create_url = "https://simple-diary-app.onrender.com/diarys"
 
 url = diary_all_url
 
@@ -21,7 +21,7 @@ if url == diary_all_url:
         diary_text = st.text_area("日記の内容")
 
         if st.button("保存"):
-            
+
             # 日付を文字列に変換
             diary_data_str = diary_data.strftime('%Y-%m-%d')
 
